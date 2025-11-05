@@ -17,9 +17,10 @@ la posición i? Si el número es mayor a k+1, no, por el contrario sí.
 
 int main(){
     int n; cin >> n; 
-    int k = 1, x[n]; 
+    int x[n]; 
     for (int i = 0; i<n; i++) cin >> x[i]; 
     sort(x, x+n); 
+    ll k = 1; 
     for (int i = 0; i < n && k >= x[i]; i++){
         k+=x[i]; 
     }
