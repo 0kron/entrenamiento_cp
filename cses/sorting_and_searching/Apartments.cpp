@@ -3,6 +3,14 @@
 using namespace std; 
 using ll = long long int; 
 
+/*
+El uso de paiirs es opcional en este problema, el punto es iterar con dos variables en los arrays ordenados, 
+en este caso "i" y "j", las cuales se mueven por los departamentos y los aplicantes respectivamente, 
+esto es, revisa si el depto actual (i) es buen match para el aplicante actual (j), en caso de que el depto 
+sea muy grande nos movemos en "j", en caso de que el aplicante pida mucho movemos "i", y en caso en que quede, 
+nos movemos en ambos y aumentamos la cuenta. 
+*/
+
 const int MAXN = 2e5; 
 pair<ll, ll> t[MAXN]; // rangos de deptos
 int T[MAXN]; // deptos disponibles
