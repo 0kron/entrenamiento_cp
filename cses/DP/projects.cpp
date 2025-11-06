@@ -1,12 +1,11 @@
 // There are n projects you can attend. 
-// For each project, you know its starting and ending days and the amount of money you would get as reward.
+// For each project, you know its starting and
+// ending days and the amount of money you would get as reward.
 // You can only attend one project during a day.
 // What is the maximum amount of money you can earn?
 #include <bits/stdc++.h>
-
 using namespace std;
 #define ll long long
-
 int main(){
 	ll n;
 	cin >> n;
@@ -31,17 +30,15 @@ int main(){
 		start = get<1>(project);
 		end = get<0>(project);
 		reward = get<2>(project);
-
 		// use binary search to look for last project that doesn't collide
-		auto it = dp.lower_bound(start); // points to the first key that is >= start
+		// points to the first key that is >= start
+		auto it = dp.lower_bound(start);
 		it --;	// This would be the first key that ends before our project starts
-
-		ll total = it->second + reward;	// The total reward if we were to take on the project
+		// The total reward if we were to take on the project
+		ll total = it->second + reward;
 		best = max(best, total);
 		dp[end] = best; // As of the last date our max reward is best
-
 	}
-
 	cout << best << endl;
 	return 0;
 }
