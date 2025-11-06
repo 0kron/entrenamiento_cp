@@ -83,7 +83,7 @@ int main() {
     int count = 0;
     
     while (count < n && iterador != nullptr) {
-        for (int j = 0; j < k+1; j++) {
+        for (int j = 0; j < (k+1)%(n-count); j++) {
             if (iterador != nullptr) {
                 iterador = iterador->next;
             }
