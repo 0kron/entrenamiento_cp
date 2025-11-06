@@ -19,5 +19,5 @@ int main(){
         act += eventos[i].second; 
         mx = max(mx, act); 
     }
-    cout << mx << endl; 
+    cout << mx; 
 }
